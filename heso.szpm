@@ -1,0 +1,8 @@
+{
+  "name": "Example-Package",
+  "version": "1.0.0",
+  "vendor": "Example GmbH",
+  "license": "GNU AFFERO GENERAL PUBLIC LICENSE",
+  "url": "http://example.com/",
+  "files": []
+}
