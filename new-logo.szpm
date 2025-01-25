@@ -1,0 +1,13 @@
+{
+  "name": "new-logo",
+  "version": "1.0.0",
+  "vendor": "Example GmbH",
+  "license": "MIT",
+  "url": "http://example.com/",
+  "files": [
+    {
+      "location": "public/assets/images/icons.svg",
+      "permission": 644
+    }
+  ]
+}
