@@ -269,3 +269,44 @@ Functions are objects that do things (run code). You can treat them like objects
     console.log(typeof func);  // Output: "function"
 	console.log(greet instanceof func);  // Output: true
 	```
+    
+ 
+<h1> Array </h1>
+
+In JavaScript, arrays are objects that are created with a special structure and behavior. They are part of the window object (in browsers) and come with built-in properties and methods designed for working with lists of data.
+
+
+
+```js
+let arr = [1, 2, 3, 4, 5];
+
+// .reverse()
+let reversedArr = arr.reverse();
+console.log("Reversed:", reversedArr);  // Output: [5, 4, 3, 2, 1]
+
+// .fill()
+arr = [1, 2, 3, 4, 5];
+arr.fill(0);  
+console.log("Filled:", arr);  // Output: [0, 0, 0, 0, 0]
+
+// .map()
+let mappedArr = arr.map(x => x + 1);
+console.log("Mapped:", mappedArr);  // Output: [1, 1, 1, 1, 1]
+
+// .shift()
+arr.shift();
+console.log("Shifted:", arr);  // Output: [0, 0, 0, 0]
+
+// .split() (string method)
+let str = "apple,banana,cherry";
+let splitArr = str.split(",");
+console.log("Split:", splitArr);  // Output: ["apple", "banana", "cherry"]
+
+// .toString()
+let arrToStr = arr.toString();
+console.log("ToString:", arrToStr);  // Output: "0,0,0,0"
+
+// .join()
+let joinedStr = arr.join("-");
+console.log("Joined:", joinedStr);  // Output: "0-0-0-0"
+```
