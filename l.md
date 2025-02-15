@@ -383,3 +383,45 @@ console.log(numberOfItems);  // Output: The number of items in sessionStorage
 |----------------------|-------------------------------------------------------------|------------------------------------------------------------|
 | **Persistence**      | Data persists even after the browser or tab is closed.      | Data is cleared once the browser tab or window is closed.   |
 | **Scope**            | Data is shared across browser tabs of the same origin.      | Data is specific to a particular browser tab or window only. |
+
+**Note** Both Stores data as key-value pairs `(both key and value are strings)`
+
+<h1> JSON </h1>
+
+
+JSON (JavaScript Object Notation) can represent an array of objects. A JSON array is a list of items enclosed in square brackets [], and each item in the array can be an object.
+
+```js
+
+[
+  {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+  },
+  {
+    "name": "Bob",
+    "age": 30,
+    "city": "Los Angeles"
+  },
+  {
+    "name": "Charlie",
+    "age": 35,
+    "city": "Chicago"
+  }
+]
+```
+
+## methods
+
+```js
+let userData = '{"name": "Bob", "age": 30}';
+
+// Using JSON.parse() to convert JSON string to a JavaScript object
+let user = JSON.parse(userData);
+console.log(user.name);  // Output: Bob
+
+// Using JSON.stringify() to convert the object back to JSON string
+let jsonString = JSON.stringify(user);
+console.log(jsonString);  // Output: '{"name":"Bob","age":30}'
+```
