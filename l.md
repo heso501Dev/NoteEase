@@ -310,3 +310,76 @@ console.log("ToString:", arrToStr);  // Output: "0,0,0,0"
 let joinedStr = arr.join("-");
 console.log("Joined:", joinedStr);  // Output: "0-0-0-0"
 ```
+
+<h1> Web API storage </h1>
+
+The Web Storage API provides ways for websites to store data in a user's browser
+| Storage Type        | Data Persistence           | Data Size            | Example Use Case             |
+|---------------------|----------------------------|----------------------|-----------------------------|
+| **Local Storage**    | Permanent (until deleted)   | 5MB to 10MB per domain | User preferences, settings   |
+| **Session Storage**  | Temporary (session-based)   | 5MB to 10MB per domain | Storing session data         |
+| **IndexedDB**        | Permanent                   | Can store much larger data | Large data like images, objects |
+
+## Local Storage
+
+`localStorage` is an object in JavaScript that provides a way to store data persistently in the web browser. It is part of the Web Storage API and allows you to save data as key-value pairs, which remain stored even after the user closes the browser or navigates away from the page. localStorage data is stored per domain and is accessible only within the same origin.
+
+```js
+// Store a key-value pair in localStorage (setItem)
+localStorage.setItem('username', 'JohnDoe');  // Stores 'JohnDoe' under the key 'username'
+
+// Retrieve the value of a key from localStorage (getItem)
+let username = localStorage.getItem('username');  // Retrieves the value of 'username' (i.e., 'JohnDoe')
+console.log(username);  // Output: 'JohnDoe'
+
+// Remove a key-value pair from localStorage (removeItem)
+localStorage.removeItem('username');  // Removes the key 'username' and its associated value
+
+// Clear all items from localStorage (clear)
+localStorage.clear();  // Removes all stored data from localStorage
+
+// Get the name of a key at a specific index (key)
+let keyAtIndex0 = localStorage.key(0);  // Returns the key at index 0 in the storage
+console.log(keyAtIndex0);  // Output: The first key name stored in localStorage
+
+// Get the number of items stored in localStorage (length)
+let numberOfItems = localStorage.length;  // Returns the total number of items stored
+console.log(numberOfItems);  // Output: The number of items in localStorage
+```
+
+
+## Session Storage
+
+`sessionStorage` is similar to localStorage but with a key difference: data stored in sessionStorage is only available for the duration of the page session. Once the browser tab or window is closed, the data is cleared.
+
+```js
+
+// Store a key-value pair in sessionStorage (setItem)
+sessionStorage.setItem('username', 'JaneDoe');  // Stores 'JaneDoe' under the key 'username'
+
+// Retrieve the value of a key from sessionStorage (getItem)
+let username = sessionStorage.getItem('username');  // Retrieves the value of 'username' (i.e., 'JaneDoe')
+console.log(username);  // Output: 'JaneDoe'
+
+// Remove a key-value pair from sessionStorage (removeItem)
+sessionStorage.removeItem('username');  // Removes the key 'username' and its associated value
+
+// Clear all items from sessionStorage (clear)
+sessionStorage.clear();  // Removes all stored data from sessionStorage
+
+// Get the name of a key at a specific index (key)
+let keyAtIndex0 = sessionStorage.key(0);  // Returns the key at index 0 in the storage
+console.log(keyAtIndex0);  // Output: The first key name stored in sessionStorage
+
+// Get the total number of items stored in sessionStorage (length)
+let numberOfItems = sessionStorage.length;  // Returns the total number of items stored
+console.log(numberOfItems);  // Output: The number of items in sessionStorage
+```
+
+## Key Differences Between `localStorage` and `sessionStorage`:
+
+
+| **Feature**          | **localStorage**                                             | **sessionStorage**                                           |
+|----------------------|-------------------------------------------------------------|------------------------------------------------------------|
+| **Persistence**      | Data persists even after the browser or tab is closed.      | Data is cleared once the browser tab or window is closed.   |
+| **Scope**            | Data is shared across browser tabs of the same origin.      | Data is specific to a particular browser tab or window only. |
