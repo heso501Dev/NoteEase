@@ -456,3 +456,45 @@ console.log(user.name);  // Output: Bob
 let jsonString = JSON.stringify(user);
 console.log(jsonString);  // Output: '{"name":"Bob","age":30}'
 ```
+
+
+
+<h1> String Methods </h1>
+
+
+```javascript
+let x = "The quick brown fox jumps over the lazy dog";
+
+// 1. indexOf() - Returns the index of the first occurrence of 'e'
+console.log(x.indexOf('e'));  // Output: 2
+
+// 2. lastIndexOf() - Returns the index of the last occurrence of 'e'
+console.log(x.lastIndexOf('e'));  // Output: 33
+
+// 3. length - Returns the length of the string
+console.log(x.length);  // Output: 43
+
+// 4. charAt() - Returns the character at index 6
+console.log(x.charAt(6));  // Output: 'q'
+
+// 5. includes() - Checks if the string includes 'and'
+console.log(x.includes('and'));  // Output: false
+
+// 6. toLocaleLowerCase() - Converts the string to lowercase
+console.log(x.toLocaleLowerCase());  // Output: 'the quick brown fox jumps over the lazy dog'
+
+// 7. replace() - Replaces the first occurrence of 'and' with '&'
+console.log(x.replace('and', '&'));  // Output: 'The quick brown fox jumps over the lazy dog' (no change since 'and' doesn't exist in the string)
+
+// 8. split() - Splits the string into an array of words
+console.log(x.split(' '));  // Output: ['The', 'quick', 'brown', 'fox', 'jumps', 'over', 'the', 'lazy', 'dog']
+
+// 9. slice() - Extracts a substring from index 0 to index 16
+console.log(x.slice(0, 16));  // Output: 'The quick brown'
+
+// 10. split().slice() - Splits the string and extracts the first 4 words
+console.log(x.split(' ').slice(0, 4));  // Output: ['The', 'quick', 'brown', 'fox']
+
+// 11. toLocaleLowerCase() - Converts the string to lowercase (again)
+console.log(x.toLocaleLowerCase());  // Output: 'the quick brown fox jumps over the lazy dog'
+```
