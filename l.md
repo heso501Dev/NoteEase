@@ -311,6 +311,37 @@ let joinedStr = arr.join("-");
 console.log("Joined:", joinedStr);  // Output: "0-0-0-0"
 ```
 
+## `splice()` Method
+
+The `splice()` method in JavaScript is used to modify an array by adding, removing, or replacing elements. It changes the original array.
+
+
+#### Syntax:
+```js
+array.splice(start, deleteCount, item1, item2, ...)
+```
+
+```js
+// Example 1: Removing elements
+let arr1 = [1, 2, 3, 4, 5];
+arr1.splice(2, 2);  // Removes 2 elements starting from index 2
+console.log(arr1);  // Output: [1, 2, 5]
+
+// Example 2: Adding elements
+let arr2 = [1, 2, 5];
+arr2.splice(2, 0, 3, 4);  // Adds 3 and 4 at index 2 without removing any elements
+console.log(arr2);  // Output: [1, 2, 3, 4, 5]
+
+// Example 3: Replacing elements
+let arr3 = [1, 2, 3, 4, 5];
+arr3.splice(2, 1, 6, 7);  // Removes 1 element at index 2 and adds 6 and 7
+console.log(arr3);  // Output: [1, 2, 6, 7, 4, 5]
+```
+
+start: The index at which to start changing the array.
+deleteCount: The number of elements to remove starting from the start index.
+item1, item2, ...: The items to add to the array, starting from the start index.
+
 <h1> Web API storage </h1>
 
 The Web Storage API provides ways for websites to store data in a user's browser
